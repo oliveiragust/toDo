@@ -6,7 +6,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:12345678@localhost:3306/to_do'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://socialnetdb_user:GNVlzNmKOEF3ZLrXHGHaKHKZ9FGXl69B@dpg-cnog73md3nmc73dkrt3g-a.oregon-postgres.render.com/socialnetdb'
 
 db.init_app(app)
 
