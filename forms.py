@@ -5,8 +5,8 @@ from wtforms.validators import DataRequired
 
 
 class TaskForm(FlaskForm):
-    task = StringField('Task', validators=[DataRequired()])
-    task_description = StringField('Task Description')
+    task = StringField('Tarefa', validators=[DataRequired()])
+    task_description = StringField('Descriçã)
     task_status = BooleanField('Task Completion', default=False)
     submit = SubmitField('Submit')
     atualizar = SubmitField('Complete')
