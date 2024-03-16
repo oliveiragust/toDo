@@ -46,10 +46,7 @@
             border-color: #555;
             box-shadow: none;
         }
-        .update-btn {
-            padding: 0.375rem 0.75rem;
-            font-size: 0.875rem;
-        }
+
     </style>
 </head>
 <body>
@@ -74,11 +71,15 @@
                             {{ form.task_description.label }}
                             {{ form.task_description(class="form-control", style="color: #ffffff;") }}
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Add Task</button>
+                        <div class="mt-2 d-grid">
+                            <button type="submit" class="btn btn-primary">Add Task</button>
+                        </div>
                     </form>
                     <form method="post" action="/delete">
                         <div class="mt-2 form-group">
-                            <button type="submit" class="btn btn-danger btn-block">Clear</button>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-danger">Clear</button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -86,13 +87,11 @@
         </div>
     </div>
 
-
-
     <div class="row justify-content-center mt-2">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                 <h2 class="card-title text-center">MyTasks</h2>
+                    <h2 class="card-title text-center">MyTasks</h2>
 
                     {% for task in tasks %}
                     <div class="d-flex mb-3 card-body bg-#333">
@@ -115,7 +114,7 @@
             </div>
         </div>
     </div>
-<div class="mt-2"></div>
+    <div class="mt-2"></div>
 </div>
 </body>
 </html>
